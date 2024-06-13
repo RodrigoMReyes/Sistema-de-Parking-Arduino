@@ -6,9 +6,16 @@ Este repositorio contiene el código y la documentación para un sistema de esta
 ## Componentes Principales
 
 - **Arduino:** Actúa como el cerebro del sistema, coordinando la lectura de sensores, el control del servo motor y la actualización de la pantalla LCD.
-- **Servo Motor:** Controla la apertura y cierre de la barrera de estacionamiento.
-- **Sensores Infrarrojos (IR):** Dos sensores encargados de detectar la entrada y salida de vehículos.
-- **Pantalla LCD:** Muestra información sobre la cantidad de espacios disponibles y mensajes importantes como "Estacionamiento lleno".
+- **Servo Motor:**
+  - **Librería Utilizada:** `Servo.h`
+  - **Función:** Controla la apertura y cierre de la barrera de estacionamiento.
+- **Sensores Infrarrojos (IR):**
+  - **Pines de Conexión:** IR1 conectado al pin 2, IR2 al pin 3.
+  - **Función:** Detectar la entrada y salida de vehículos, ajustando el contador de espacios disponibles.
+- **Pantalla LCD:**
+  - **Modelo:** I2C LCD
+  - **Configuración:** Dirección I2C 0x27, 16 columnas y 2 filas.
+  - **Función:** Muestra información sobre la cantidad de espacios disponibles y mensajes importantes como "Estacionamiento lleno".
 
 ## Funcionamiento del Sistema
 
@@ -24,4 +31,4 @@ Este repositorio contiene el código y la documentación para un sistema de esta
 
 ## Autores
 
-- Rodrigo Manuel Reyes Córdoba
+- Rodrigo Manuel Reyes Cordova
