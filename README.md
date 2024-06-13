@@ -29,6 +29,6 @@ Este repositorio contiene el código y la documentación para un sistema de esta
 - Retraso breve antes de cerrar la barrera para asegurar un movimiento seguro.
 - Mensajes en la pantalla LCD cuando el estacionamiento está lleno para informar a los conductores.
 
-## Autores
+## Autor
 
 - Rodrigo Manuel Reyes Cordova
