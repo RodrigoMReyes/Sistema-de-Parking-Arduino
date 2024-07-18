@@ -14,8 +14,8 @@
 
 // Your WiFi credentials.
 char auth[] = BLYNK_AUTH_TOKEN; // Blynk authentication token
-char ssid[] = "iPhone"; // Your WiFi SSID
-char pass[] = "rod3249172"; // Your WiFi password
+char ssid[] = ""; // Your WiFi SSID
+char pass[] = ""; // Your WiFi password
 
 LiquidCrystal_I2C lcd(0x27, 16, 2); // Inicializa el objeto lcd
 Servo servo1;
