@@ -1,34 +1,34 @@
-# Sistema-de-Parking-Arduino
-## Proyecto de Estacionamiento Automatizado con Arduino
+# Sistema de Parking ESP32 Blynk
 
-Este repositorio contiene el código y la documentación para un sistema de estacionamiento automatizado utilizando Arduino. El proyecto facilita la gestión de acceso de vehículos a un estacionamiento con capacidad para cuatro espacios, mostrando en tiempo real la disponibilidad de espacios y controlando una barrera automática para la entrada y salida de vehículos.
+## Integrante:
+* Reyes Cordova Rodrigo Manuel
 
-## Componentes Principales
+## Descripción
+El Sistema de Parking ESP32 Blynk es un proyecto diseñado para automatizar el control y monitoreo de un estacionamiento utilizando la tecnología ESP32 y la plataforma Blynk. Este sistema permite la gestión de accesos mediante sensores infrarrojos y un servo motor que actúa como barrera física.
 
-- **Arduino:** Actúa como el cerebro del sistema, coordinando la lectura de sensores, el control del servo motor y la actualización de la pantalla LCD.
-- **Servo Motor:**
-  - **Librería Utilizada:** `Servo.h`
-  - **Función:** Controla la apertura y cierre de la barrera de estacionamiento.
-- **Sensores Infrarrojos (IR):**
-  - **Pines de Conexión:** IR1 conectado al pin 2, IR2 al pin 3.
-  - **Función:** Detectar la entrada y salida de vehículos, ajustando el contador de espacios disponibles.
-- **Pantalla LCD:**
-  - **Modelo:** I2C LCD
-  - **Configuración:** Dirección I2C 0x27, 16 columnas y 2 filas.
-  - **Función:** Muestra información sobre la cantidad de espacios disponibles y mensajes importantes como "Estacionamiento lleno".
+## Características
+- **Control de acceso automático**: Utiliza sensores IR para detectar la entrada y salida de vehículos.
+- **Interfaz de usuario**: Dispone de un display LCD que muestra información relevante como el estado de la conexión y la disponibilidad de espacios.
+- **Monitoreo y control remoto**: Integración con la plataforma Blynk para visualizar y gestionar el parqueo desde cualquier lugar.
+- **Servo controlado**: Barrera controlada por un servo motor, que se maneja automáticamente según el flujo de vehículos.
 
-## Funcionamiento del Sistema
+## Componentes
+- ESP32
+- LiquidCrystal I2C (LCD)
+- Servo Motor
+- Sensores Infrarrojos (IR)
+- Conexión a Internet para Blynk
 
-1. **Inicialización:** Al encenderse, el sistema muestra un mensaje de bienvenida en la pantalla LCD.
-2. **Detección de Entrada:** Si un vehículo se acerca a la entrada y hay espacios disponibles, el sistema abre la barrera y decrementa el contador de espacios disponibles.
-3. **Detección de Salida:** Al detectar un vehículo en la salida, el sistema abre la barrera, permite la salida del vehículo y actualiza el contador de espacios.
-4. **Actualización de la Pantalla LCD:** Constantemente se muestra el número de espacios disponibles y mensajes de estado.
+## Configuración
+1. **Conexión de Componentes**: Conecta los sensores IR, el servo motor y el LCD al ESP32 según el esquema de pines definido.
+2. **Configuración WiFi**: Establece las credenciales de tu red WiFi en el código.
+3. **Configuración de Blynk**: Asegúrate de tener una cuenta en Blynk y de configurar el token de autenticación en el código.
 
-## Características Adicionales
+## Uso
+Una vez que el sistema esté configurado y en funcionamiento, mostrará en el LCD el estado de conexión y los espacios disponibles. Las entradas y salidas de vehículos se registrarán automáticamente y podrás monitorear y controlar el sistema a través de la app Blynk.
 
-- Retraso breve antes de cerrar la barrera para asegurar un movimiento seguro.
-- Mensajes en la pantalla LCD cuando el estacionamiento está lleno para informar a los conductores.
+## Soporte
+Para soporte técnico o contribuciones al proyecto, por favor abre un issue en el repositorio de GitHub o envía un correo directamente al equipo de desarrollo.
 
-## Autor
-
-- Rodrigo Manuel Reyes Cordova
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo LICENSE.md para más detalles.
