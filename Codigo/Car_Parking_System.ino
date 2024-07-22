@@ -12,10 +12,10 @@
 #define BLYNK_TEMPLATE_NAME "Sistema de Parqueo ESP32"
 #define BLYNK_AUTH_TOKEN "RiWd7KT3q8IRW_3VwVFhuAssWB1CIQ1R"
 
-// Your WiFi credentials.
-char auth[] = BLYNK_AUTH_TOKEN; // Blynk authentication token
-char ssid[] = ""; // Your WiFi SSID
-char pass[] = ""; // Your WiFi password
+// Credenciales WiFi
+char auth[] = BLYNK_AUTH_TOKEN; // Token BLynk
+char ssid[] = ""; // SSID
+char pass[] = ""; // WiFi Password
 
 LiquidCrystal_I2C lcd(0x27, 16, 2); // Inicializa el objeto lcd
 Servo servo1;
